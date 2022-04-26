@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-107dp"
+        tools:layout_editor_absoluteY="-148dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageSwitcher
+                android:id="@+id/photo"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/anhdautay"
+                android:transitionName="photoToAnimate"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/next"
+                android:backgroundTint="#000000"
+                app:layout_constraintBaseline_toBottomOf="@drawable/share"
+                app:layout_constraintBottom_toBottomOf="@+id/photo"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/share"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/previous"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/previous"
+                android:backgroundTint="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="@+id/photo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button2"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/share"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/share"
+                android:backgroundTint="#000000"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/back"
+                android:backgroundTint="#000000"
+                android:visibility="visible"
+                app:iconTint="#E6000000"
+                app:rippleColor="#000000"
+                app:strokeColor="#000000"
+                tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@id/photo"
+                tools:layout_editor_absoluteY="300dp" />
+
+            <TextView
+                android:layout_width="169dp"
+                android:layout_height="86dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:padding="2dp"
+                android:text="1.270.000VND"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toRightOf="@id/ratingBar"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar"
+                app:layout_constraintTop_toBottomOf="@+id/photo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="DÂU TÂY NHẬT BẢN"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+            <TextView
+                android:id="@+id/product_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:padding="8dp"
+                android:text="Quy cách: Size 36 trái/hộp 500g \nCategories: Đặc Sản ĐàLạt, Hoa Quả Tươi\nHỗ trợ 25.000 phí ship cho đơn hàng từ 500.000đ\nHỗ trợ 50.000 phí ship cho đơn hàng từ 1.000.000đ\nĐặt hàng trước 15h để sản phẩm được tươi ngon\nLiên hệ hotline: 0937 485 779\n-Tham khảo trái cây tươi Đà Lạt tại: https://dalatfarm.net/hoa-qua-tuoi\n-Tham khảo rau củ quả tươi Đà Lạt tại: https://dalatfarm.net/rau-cu-qua-tuoi\n-Tham khảo sản phẩm từ rau củ tại: https://dalatfarm.net/san-pham-tu-rau-cu/"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+            <TextView
+                android:id="@+id/product_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="QUANTITY"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_detail" />
+
+            <Button
+                android:id="@+id/subtractqty"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/remove"
+                app:layout_constraintLeft_toRightOf="@id/product_size"
+                app:layout_constraintTop_toBottomOf="@id/product_detail"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/sizeno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#000"
+                android:hint="0"
+                android:inputType="number"
+                android:digits="01"
+                android:maxLength="2"
+                android:textColor="@color/white"
+                android:backgroundTint="#000000"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@id/subtractqty"
+                app:layout_constraintTop_toBottomOf="@id/product_detail"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="169dp"
+                tools:layout_editor_absoluteY="644dp" />
+            <Button
+                android:id="@+id/addqty"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/add"
+                android:backgroundTint="#000000"
+                app:layout_constraintLeft_toRightOf="@id/sizeno"
+                app:layout_constraintTop_toBottomOf="@id/product_detail"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners_red"
+        android:text="Add to cart"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
